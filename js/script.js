@@ -129,3 +129,17 @@ function trackResumeDownload() {
         file_name: 'Chetan_Dabholkar_Resume.pdf'
     });
 }
+
+function trackContactClick() {
+    gtag('event', 'contact_click', {
+        event_category: 'engagement',
+        event_label: 'Contact Button'
+    });
+}
+
+function trackSocialClick(platform) {
+    gtag('event', 'social_click', {
+        event_category: 'engagement',
+        event_label: platform
+    });
+}

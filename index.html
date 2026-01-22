@@ -95,6 +95,10 @@
                     Known for strong problem-solving skills, clean code practices, clean code principles,
                     and a continuous focus on performance optimization and application security.
                 </p>
+                <p>
+                    I integrated Google Analytics custom events to track resume downloads, contact interactions, and
+                    social profile engagement on my portfolio.
+                </p>
             </div>
 
             <!-- Stats Tiles Section -->
@@ -329,14 +333,15 @@
                 <p class="contact-subtitle">Open to backend engineering opportunities.</p>
 
                 <div class="contact-cards">
-                    <a href="tel:+917798909179" class="contact-card" aria-label="Call Chetan">
+                    <a href="tel:+917798909179" class="contact-card" aria-label="Call Chetan"
+                        onclick="trackContactClick()">
                         <div class="icon">📞</div>
                         <div>
                             <h4>Phone</h4>
                             <p>+91 7798909179</p>
                         </div>
                     </a>
-                    <a href="mailto:chetandabholkar7@gmail.com" class="contact-card">
+                    <a href="mailto:chetandabholkar7@gmail.com" class="contact-card" onclick="trackContactClick()">
                         <div class="icon">📧</div>
                         <div>
                             <h4>Email</h4>
@@ -344,8 +349,8 @@
                         </div>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/chetan-dabholkar-31037780" target="_blank"
-                        class="contact-card">
+                    <a href="https://www.linkedin.com/in/chetan-dabholkar-31037780" target="_blank" class="contact-card"
+                        onclick="trackSocialClick('LinkedIn')">
                         <div class="icon">💼</div>
                         <div>
                             <h4>LinkedIn</h4>
@@ -353,7 +358,8 @@
                         </div>
                     </a>
 
-                    <a href="https://github.com/Dragon7798" target="_blank" class="contact-card">
+                    <a href="https://github.com/Dragon7798" target="_blank" class="contact-card"
+                        onclick="trackSocialClick('GitHub')">
                         <div class="icon">👨‍💻</div>
                         <div>
                             <h4>GitHub</h4>
@@ -407,6 +413,10 @@
                 enterprise-grade applications across banking, insurance, and e-commerce domains.
                 Known for strong problem-solving skills, clean code practices, clean code principles,
                 and a continuous focus on performance optimization and application security.
+            </p>
+            <p>
+                I integrated Google Analytics custom events to track resume downloads, contact interactions, and social
+                profile engagement on my portfolio.
             </p>
         </section>
 
@@ -483,17 +493,18 @@
         </section>
 
         <section class="mobile-contact">
-            <a href="tel:+917798909179" class="mobile-contact-card">
+            <a href="tel:+917798909179" class="mobile-contact-card" onclick="trackContactClick()">
                 <span class="icon">📞</span>
                 <span class="label">Call</span>
             </a>
 
-            <a href="mailto:chetandabholkar7@gmail.com" class="mobile-contact-card">
+            <a href="mailto:chetandabholkar7@gmail.com" class="mobile-contact-card" onclick="trackContactClick()">
                 <span class="icon">📧</span>
                 <span class="label">Email</span>
             </a>
 
-            <a href="https://github.com/Dragon7798" target="_blank" class="mobile-contact-card">
+            <a href="https://github.com/Dragon7798" target="_blank" class="mobile-contact-card"
+                onclick="trackSocialClick('GitHub')">
                 <span class="icon">👨‍💻</span>
                 <span class="label">GitHub</span>
             </a>
