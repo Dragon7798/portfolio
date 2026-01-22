@@ -122,3 +122,10 @@ window.addEventListener("scroll", () => {
         nav.classList.toggle("scrolled", window.scrollY > 10);
     }
 });
+function trackResumeDownload() {
+    gtag('event', 'resume_download', {
+        event_category: 'engagement',
+        event_label: 'Resume PDF',
+        file_name: 'Chetan_Dabholkar_Resume.pdf'
+    });
+}
