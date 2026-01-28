@@ -1204,3 +1204,106 @@ body {
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
     white-space: nowrap;
 }
+
+/* Personal Projects Section */
+.personal-projects-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.personal-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card */
+.personal-project-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Hover */
+.personal-project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.personal-project-card h3 {
+    margin-bottom: 0.8rem;
+}
+
+/* Description */
+.personal-project-card p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Tech badges reuse your existing style */
+.personal-project-card .project-tech {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+/* Hover CTA */
+.visit-cta {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1.5rem;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    color: #6cf;
+}
+
+/* Show CTA on hover */
+.personal-project-card:hover .visit-cta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Project Thumbnail */
+.project-thumbnail {
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background: #111;
+}
+
+.project-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Subtle zoom on hover */
+.personal-project-card:hover .project-thumbnail img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .project-thumbnail {
+        height: 140px;
+    }
+}
+
+.personal-project-card {
+    cursor: pointer;
+}
