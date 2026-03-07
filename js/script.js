@@ -143,3 +143,16 @@ function trackSocialClick(platform) {
         event_label: platform
     });
 }
+
+function goGame() {
+
+    const games = [
+        "https://guessing-number-game-meme.netlify.app/",
+        "https://flip-cards-meme.netlify.app/"
+    ];
+
+    const randomIndex = Math.floor(Math.random() * games.length);
+
+    window.location.href = games[randomIndex];
+
+}
