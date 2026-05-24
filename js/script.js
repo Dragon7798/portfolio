@@ -1,158 +1,138 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.dataLayer = window.dataLayer || [];
+window.gtag = window.gtag || function () {
+  window.dataLayer.push(arguments);
+};
 
-    /* ==========================
-       Fade-in Sections on Scroll
-    ========================== */
-    const sections = document.querySelectorAll("section");
+if (window.gtag) {
+  gtag('js', new Date());
+  gtag('config', 'G-K22C3GK7WS');
+}
 
-    if (sections.length) {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
-                }
-            });
-        }, { threshold: 0.15 });
+const yr = document.getElementById('currentYear');
+if (yr) yr.textContent = new Date().getFullYear();
 
-        sections.forEach(section => {
-            section.style.opacity = "0";
-            section.style.transform = "translateY(40px)";
-            section.style.transition = "all 0.8s ease";
-            observer.observe(section);
-        });
-    }
+const themeBtn = document.getElementById('themeBtn');
+const themeIcon = document.getElementById('themeIcon');
+const sunPath = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+const moonPath = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
 
-    /* ==========================
-       Nav Link Highlight on Scroll
-    ========================== */
-    const scrollSections = document.querySelectorAll("section, .projects-wrapper");
-    const navLinks = document.querySelectorAll(".nav-link");
+function setDark(dark) {
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : '');
+  if (themeIcon) themeIcon.innerHTML = dark ? sunPath : moonPath;
+  localStorage.setItem('theme', dark ? 'dark' : 'light');
+}
 
-    if (scrollSections.length && navLinks.length) {
-        window.addEventListener("scroll", () => {
-            let current = "";
+const saved = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+setDark(saved ? saved === 'dark' : prefersDark);
 
-            scrollSections.forEach(section => {
-                const sectionTop = section.offsetTop - 150;
-                if (window.scrollY >= sectionTop && section.id) {
-                    current = section.id;
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === `#${current}`) {
-                    link.classList.add("active");
-                }
-            });
-        });
-    }
-
-    /* ==========================
-       Stats Counter Animation
-    ========================== */
-    const statTiles = document.querySelectorAll(".stat-tile h3");
-
-    if (statTiles.length) {
-        const counterObserver = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.classList.contains("counted")) {
-                    const rawText = entry.target.textContent;
-                    const target = parseInt(rawText.replace(/\D/g, ""), 10);
-                    const hasPlus = rawText.includes("+");
-
-                    let count = 0;
-                    const increment = Math.ceil(target / 100);
-
-                    const counter = setInterval(() => {
-                        count += increment;
-                        if (count >= target) {
-                            count = target;
-                            clearInterval(counter);
-                        }
-                        entry.target.textContent = count + (hasPlus ? "+" : "");
-                    }, 20);
-
-                    entry.target.classList.add("counted");
-                }
-            });
-        }, { threshold: 0.5 });
-
-        statTiles.forEach(tile => counterObserver.observe(tile));
-    }
-
-    /* ==========================
-       Dark Mode Toggle
-    ========================== */
-    const themeToggle = document.getElementById("themeToggle");
-
-    if (themeToggle) {
-        // Load saved theme
-        if (localStorage.getItem("theme") === "dark") {
-            document.body.classList.add("dark-mode");
-            themeToggle.textContent = "☀️";
-        }
-
-        themeToggle.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-
-            const isDark = document.body.classList.contains("dark-mode");
-            localStorage.setItem("theme", isDark ? "dark" : "light");
-            themeToggle.textContent = isDark ? "☀️" : "🌙";
-        });
-    }
-
-    /* ==========================
-       System Preference (First Visit)
-    ========================== */
-    if (!localStorage.getItem("theme")) {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            document.body.classList.add("dark-mode");
-        }
-    }
+themeBtn && themeBtn.addEventListener('click', () => {
+  setDark(document.documentElement.getAttribute('data-theme') !== 'dark');
 });
 
-/* ==========================
-   Navbar Scroll Shadow
-========================== */
-window.addEventListener("scroll", () => {
-    const nav = document.querySelector(".main-nav");
-    if (nav) {
-        nav.classList.toggle("scrolled", window.scrollY > 10);
-    }
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger && hamburger.addEventListener('click', () => {
+  const open = hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
 });
-function trackResumeDownload() {
-    gtag('event', 'resume_download', {
-        event_category: 'engagement',
-        event_label: 'Resume PDF',
-        file_name: 'Chetan_Dabholkar_Resume.pdf'
+
+document.querySelectorAll('.mobile-link').forEach((link) => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  });
+});
+
+const nav = document.getElementById('nav');
+const fab = document.getElementById('fab');
+
+function onScroll() {
+  if (nav) {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }
+  if (fab) {
+    fab.classList.toggle('visible', window.scrollY > 400);
+  }
+}
+
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+const reveals = document.querySelectorAll('.reveal');
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+reveals.forEach((element) => revealObs.observe(element));
+
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('main section[id]');
+const navObs = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    navLinks.forEach((link) => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${entry.target.id}`) {
+        link.classList.add('active');
+      }
     });
+  });
+}, { rootMargin: '-40% 0px -55% 0px', threshold: 0.1 });
+
+sections.forEach((section) => navObs.observe(section));
+
+document.querySelectorAll('[data-track-project]').forEach((element) => {
+  element.addEventListener('click', () => {
+    if (window.gtag) {
+      gtag('event', 'project_click', {
+        event_category: 'engagement',
+        event_label: element.getAttribute('data-track-project')
+      });
+    }
+  });
+});
+
+function trackResumeDownload() {
+  if (window.gtag) {
+    gtag('event', 'resume_download', {
+      event_category: 'engagement'
+    });
+  }
 }
 
 function trackContactClick() {
+  if (window.gtag) {
     gtag('event', 'contact_click', {
-        event_category: 'engagement',
-        event_label: 'Contact Button'
+      event_category: 'engagement'
     });
+  }
 }
 
 function trackSocialClick(platform) {
+  if (window.gtag) {
     gtag('event', 'social_click', {
-        event_category: 'engagement',
-        event_label: platform
+      event_category: 'engagement',
+      event_label: platform
     });
+  }
 }
 
-function goGame() {
-
-    const games = [
-        "https://guessing-number-game-meme.netlify.app/",
-        "https://flip-cards-meme.netlify.app/"
-    ];
-
-    const randomIndex = Math.floor(Math.random() * games.length);
-
-    window.location.href = games[randomIndex];
-
+function trackPrimaryCta(source) {
+  if (window.gtag) {
+    gtag('event', 'primary_cta_click', {
+      event_category: 'conversion',
+      event_label: source
+    });
+  }
 }

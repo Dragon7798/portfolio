@@ -1,805 +1,537 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Java Backend Developer with 3+ years of experience in Spring Boot, AWS, REST & GraphQL APIs.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chetan Dabholkar — Java Backend Developer specializing in Spring Boot, APIs, AWS, and secure systems.">
+  <title>Chetan Dabholkar | Java Backend Developer</title>
+  <link rel="canonical" href="https://chetan-dabholkar-portfolio.vercel.app/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 
-    <title>Chetan Dabholkar | Java Backend Developer</title>
+  <meta property="og:title" content="Chetan Dabholkar | Java Backend Developer">
+  <meta property="og:description" content="Backend engineering portfolio — secure APIs, AWS, Spring Boot, and performance-focused systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chetan-dabholkar-portfolio.vercel.app/">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- <link rel="canonical" href="https://your-vercel-url.vercel.app"> -->
-
-    <meta name="keywords"
-        content="Java Backend Developer, Spring Boot Developer, REST API Developer, GraphQL, AWS, Mumbai">
-    <meta name="author" content="Chetan Dabholkar">
-
-    <!-- Open Graph (LinkedIn / WhatsApp preview) -->
-    <meta property="og:title" content="Chetan Dabholkar | Java Backend Developer">
-    <meta property="og:description" content="3+ years experience in Spring Boot, AWS, REST & GraphQL APIs">
-    <meta property="og:image" content="https://dragon7798.github.io/portfolio/assets/profile/profile.jpg">
-    <meta property="og:type" content="website">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K22C3GK7WS"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-K22C3GK7WS');
-    </script>
-
-
-    <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
-
-    <script>
-        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/speed-insights/script.js"></script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K22C3GK7WS"></script>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <div class="desktop-view">
-        <nav class="main-nav">
-            <div class="nav-brand">
-                <span class="nav-logo-icon"><img src="assets/nav/nav.png"
-                        alt="Chetan Dabholkar - Java Backend Developer"></span>
-                <span class="nav-logo-text">Chetan Dabholkar</span>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand" aria-label="Go to top">
+        <span class="dot" aria-hidden="true"></span>
+        Chetan Dabholkar
+      </a>
+      <div class="nav-links" role="list">
+        <a href="#about" class="nav-link" role="listitem">About</a>
+        <a href="#skills" class="nav-link" role="listitem">Skills</a>
+        <a href="#projects" class="nav-link" role="listitem">Projects</a>
+        <a href="#contact" class="nav-link" role="listitem">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="themeIcon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="assets/resume/Chetan_Dabholkar.pdf" download class="nav-cta" onclick="trackResumeDownload()">Resume ↓</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" role="dialog">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="hero-bg-blob blob-1"></div>
+        <div class="hero-bg-blob blob-2"></div>
+      </div>
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Copy -->
+          <div class="hero-copy">
+            <div class="hero-tag reveal">
+              <span class="dot-live" aria-hidden="true"></span>
+              Available for full-time, freelance &amp; contract roles
             </div>
-
-            <a href="#intro" class="nav-link">Intro</a>
-            <a href="#about-me" class="nav-link">About</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </nav>
-        <!-- Floating icons (kept as-is) -->
-        <div class="floating-icons" id="intro">
-            <span class="tech-icon java">☕</span>
-            <span class="tech-icon spring">🌱</span>
-            <span class="tech-icon api">🔗</span>
-            <span class="tech-icon security">🔐</span>
-            <span class="tech-icon aws">☁️</span>
-            <span class="tech-icon database">🗄️</span>
-            <span class="tech-icon nosql">📦</span>
-            <span class="tech-icon git">🔧</span>
-            <span class="tech-icon performance">⚡</span>
-        </div>
-        <div class="above-the-fold">
-            <!-- Hero Image Container -->
-            <div class="hero-image-container">
-                <!-- Download Resume Button on top -->
-                <a href="assets/resume/Chetan_Dabholkar.pdf" download class="btn-hero hero-button"
-                    onclick="trackResumeDownload()">
-                    📄 Download Resume
-                </a>
-
-                <!-- Hero Image -->
-                <img src="assets/profile/image.PNG" alt="Chetan Dabholkar - Java Backend Developer" class="hero-image">
+            <h1 class="hero-title reveal reveal-d1">
+              Backend<br>
+              systems that<br>
+              <em>ship.</em>
+            </h1>
+            <p class="hero-desc reveal reveal-d2">
+              I design and build secure Spring Boot APIs, performance-focused backend services, and production-ready integrations for finance, insurance, and customer platforms. 3+ years, 7+ shipped.
+            </p>
+            <div class="hero-actions reveal reveal-d3">
+              <a href="assets/resume/Chetan_Dabholkar.pdf" download class="btn-primary" onclick="trackResumeDownload()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download resume
+              </a>
+              <a href="#contact" class="btn-outline" onclick="trackPrimaryCta('contact')">
+                Book a call
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
             </div>
-
-        </div>
-
-        <section id="about-me" class="about-me-section">
-            <h2>About Me</h2>
-
-            <div class="about-me-content">
-                <p>
-                    Results-driven Java Backend Developer with 3+ years of experience designing,
-                    developing, and optimizing RESTful and GraphQL APIs using Java and Spring Boot.
-                    Proven ability to build secure, scalable, and high-performance backend systems
-                    with strong expertise in authentication and authorization mechanisms, including
-                    JWT, OAuth 2.0, and AWS Cognito.
-                </p>
-
-                <p>
-                    Experienced in working with AWS services, relational and NoSQL databases, and
-                    enterprise-grade applications across banking, insurance, and e-commerce domains.
-                    Known for strong problem-solving skills, clean code practices, clean code principles,
-                    and a continuous focus on performance optimization and application security.
-                </p>
-                <p>
-                    I integrated Google Analytics custom events to track resume downloads, contact interactions, and
-                    social profile engagement on my portfolio.
-                </p>
+            <div class="hero-meta reveal reveal-d4">
+              <span class="hero-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Mumbai, India
+              </span>
+              <span class="hero-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                Backend · API · AWS
+              </span>
+              <span class="hero-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                Open to opportunities
+              </span>
             </div>
+          </div>
 
-            <!-- Stats Tiles Section -->
-            <section class="stats-section">
-                <div class="stats-container">
-                    <div class="stats-track" id="stats-track">
-                        <div class="stat-tile">
-                            <h3>3+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat-tile">
-                            <h3>8</h3>
-                            <p>Technologies Used</p>
-                        </div>
-                        <div class="stat-tile">
-                            <h3>7+</h3>
-                            <p>Projects Worked</p>
-                        </div>
-                        <div class="stat-tile">
-                            <h3>2+</h3>
-                            <p>Certifications</p>
-                        </div>
-                    </div>
+          <!-- Profile card -->
+          <div class="hero-panel-col reveal reveal-d2">
+            <div class="profile-card">
+              <div class="profile-img-wrap">
+                <img src="assets/profile/profile.jpg" alt="Chetan Dabholkar — Java Backend Developer" loading="eager" fetchpriority="high">
+              </div>
+              <div class="profile-copy">
+                <div class="profile-name">Chetan Dabholkar</div>
+                <div class="profile-role">Java Backend Developer · Spring Boot · AWS</div>
+              </div>
+              <div class="profile-stats">
+                <div class="stat-cell">
+                  <strong>3+</strong>
+                  <span>years backend</span>
                 </div>
-            </section>
-        </section>
+                <div class="stat-cell">
+                  <strong>7+</strong>
+                  <span>projects shipped</span>
+                </div>
+                <div class="stat-cell">
+                  <strong>8</strong>
+                  <span>core tech areas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-        🌙
-    </button> -->
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee-section" aria-label="Technology expertise" aria-hidden="true">
+      <div class="marquee-track">
+        <!-- doubled for seamless loop -->
+        <div class="marquee-item"><span class="dot-sm"></span>Java 8 / 17 / 21</div>
+        <div class="marquee-item"><span class="dot-sm"></span>Spring Boot</div>
+        <div class="marquee-item"><span class="dot-sm"></span>REST APIs</div>
+        <div class="marquee-item"><span class="dot-sm"></span>GraphQL</div>
+        <div class="marquee-item"><span class="dot-sm"></span>AWS Lambda</div>
+        <div class="marquee-item"><span class="dot-sm"></span>AWS Cognito</div>
+        <div class="marquee-item"><span class="dot-sm"></span>JWT · OAuth 2.0</div>
+        <div class="marquee-item"><span class="dot-sm"></span>PostgreSQL</div>
+        <div class="marquee-item"><span class="dot-sm"></span>MongoDB</div>
+        <div class="marquee-item"><span class="dot-sm"></span>Microservices</div>
+        <div class="marquee-item"><span class="dot-sm"></span>Python Automation</div>
+        <div class="marquee-item"><span class="dot-sm"></span>Git · GitHub</div>
+        <div class="marquee-item"><span class="dot-sm"></span>Java 8 / 17 / 21</div>
+        <div class="marquee-item"><span class="dot-sm"></span>Spring Boot</div>
+        <div class="marquee-item"><span class="dot-sm"></span>REST APIs</div>
+        <div class="marquee-item"><span class="dot-sm"></span>GraphQL</div>
+        <div class="marquee-item"><span class="dot-sm"></span>AWS Lambda</div>
+        <div class="marquee-item"><span class="dot-sm"></span>AWS Cognito</div>
+        <div class="marquee-item"><span class="dot-sm"></span>JWT · OAuth 2.0</div>
+        <div class="marquee-item"><span class="dot-sm"></span>PostgreSQL</div>
+        <div class="marquee-item"><span class="dot-sm"></span>MongoDB</div>
+        <div class="marquee-item"><span class="dot-sm"></span>Microservices</div>
+        <div class="marquee-item"><span class="dot-sm"></span>Python Automation</div>
+        <div class="marquee-item"><span class="dot-sm"></span>Git · GitHub</div>
+      </div>
+    </div>
 
-        <section id="skills">
-            <h2>Technical Arsenal</h2>
-            <ul class="skills-list">
-                <!-- Programming Languages -->
-                <li>Java 8 | 17 | 21</li>
-                <li>C++</li>
-                <li>Python</li>
-                <li>SQL</li>
-                <li>JavaScript</li>
-                <li>GraphQL</li>
+    <!-- ===== PILLARS ===== -->
+    <section class="section" id="about-intro" aria-label="Key strengths">
+      <div class="container">
+        <div class="reveal">
+          <span class="eyebrow">What I bring</span>
+          <h2 class="section-title">Three things that matter<br>to every hiring decision.</h2>
+        </div>
+        <div class="pillars-grid">
+          <div class="pillar-card reveal reveal-d1">
+            <div class="pillar-num" aria-hidden="true">01</div>
+            <span class="pillar-kicker">Security-first</span>
+            <div class="pillar-title">JWT, OAuth 2.0, AES/RSA, and AWS-native auth workflows</div>
+          </div>
+          <div class="pillar-card reveal reveal-d2">
+            <div class="pillar-num" aria-hidden="true">02</div>
+            <span class="pillar-kicker">Performance-minded</span>
+            <div class="pillar-title">API design and query optimization aimed at faster, stable releases</div>
+          </div>
+          <div class="pillar-card reveal reveal-d3">
+            <div class="pillar-num" aria-hidden="true">03</div>
+            <span class="pillar-kicker">Business-aware</span>
+            <div class="pillar-title">Shipping backend systems that support real product workflows, not just code correctness</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <!-- Frameworks & Libraries -->
-                <li>Spring Boot</li>
-                <li>Spring MVC</li>
-                <li>SHAFT</li>
-
-                <!-- API Development -->
-                <li>RESTful APIs</li>
-                <li>GraphQL APIs</li>
-
-                <!-- Security & Authentication -->
-                <li>JWT</li>
-                <li>OAuth 2.0 (Google & GitHub Login)</li>
-                <li>AWS Cognito</li>
-                <li>OWASP ESAPI</li>
-
-                <!-- Cloud & DevOps -->
-                <li>AWS Lambda</li>
-
-                <!-- Databases -->
-                <li>PostgreSQL</li>
-                <li>MySQL</li>
-                <li>Oracle</li>
-                <li>MongoDB</li>
-
-                <!-- Version Control -->
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>Bitbucket</li>
-
-                <!-- Other / Related -->
-                <li>Microservices</li>
-                <li>Performance Optimization</li>
-                <li>Application Security Principles</li>
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="reveal">
+          <span class="eyebrow">Why teams hire me</span>
+          <h2 class="section-title" id="about-heading">Built for production,<br>explained for decision-makers.</h2>
+          <div class="divider" aria-hidden="true"></div>
+        </div>
+        <div class="about-grid">
+          <div>
+            <p class="about-text reveal">
+              I bring a rare combination of backend depth and product clarity. That means I can speak both to architecture and to outcomes: faster API delivery, cleaner security models, and reliable systems that support user growth.
+            </p>
+            <p class="about-text reveal">
+              My experience spans enterprise banking and insurance platforms, AWS-based automation, and modern web products. I work best with teams that want strong engineering discipline and visible business impact.
+            </p>
+            <div class="impact-items">
+              <div class="impact-item reveal reveal-d1">
+                <div class="impact-num" aria-hidden="true">01</div>
+                <div class="impact-body">
+                  <h4>Secure APIs and auth flows</h4>
+                  <p>JWT, OAuth 2.0, AWS Cognito, and secure data handling across high-trust financial and insurance platforms.</p>
+                </div>
+              </div>
+              <div class="impact-item reveal reveal-d2">
+                <div class="impact-num" aria-hidden="true">02</div>
+                <div class="impact-body">
+                  <h4>Reliable backend systems</h4>
+                  <p>Spring Boot services, GraphQL and REST API design, and database performance tuning for production teams.</p>
+                </div>
+              </div>
+              <div class="impact-item reveal reveal-d3">
+                <div class="impact-num" aria-hidden="true">03</div>
+                <div class="impact-body">
+                  <h4>Cross-functional communication</h4>
+                  <p>I translate technical tradeoffs into clear language for product, QA, and hiring stakeholders.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <aside class="about-aside reveal reveal-d1" aria-label="Recruiter highlights">
+            <span class="aside-label">What recruiters respond to</span>
+            <ul class="aside-list">
+              <li>Strong backend fundamentals in Java and Spring Boot</li>
+              <li>Experience with AWS, security, and production-grade APIs</li>
+              <li>Portfolio evidence of enterprise delivery and personal product work</li>
+              <li>Clear communication, fast delivery, and practical problem-solving</li>
             </ul>
-        </section>
+            <a href="#projects" class="aside-link" onclick="trackPrimaryCta('projects')">
+              See project evidence
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
 
-        <!-- Personal Projects -->
-        <section id="personal-projects" class="personal-projects-section">
-            <h2>Personal Projects</h2>
-
-            <div class="personal-projects-grid">
-
-                <!-- Portfolio Project -->
-                <a href="https://chetan-dabholkar-portfolio.vercel.app/" target="_blank" class="personal-project-card"
-                    onclick="gtag('event','personal_project_click',{project:'Portfolio'})">
-
-                    <div class="project-thumbnail">
-                        <img src="assets/project/portfolio/1.png" alt="Developer Portfolio Preview" loading="lazy">
-                    </div>
-
-                    <h3>Developer Portfolio</h3>
-
-                    <p>
-                        Responsive developer portfolio with analytics tracking,
-                        resume download insights, and performance optimization.
-                    </p>
-
-                    <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>GA4</span>
-                        <span>Vercel</span>
-                    </div>
-
-                    <span class="visit-cta">Click to visit →</span>
-                </a>
-
-                <!-- Event Hub -->
-                <a href="https://goodwill-traders.vercel.app/" target="_blank"
-                    class="personal-project-card" onclick="gtag('goodwill-traders','personal_project_click',{project:'Goodwill Traders'})">
-
-                    <div class="project-thumbnail">
-                        <img src="assets/project/goodwill_traders/1.png" alt="Local Event Hub Preview" loading="lazy">
-                    </div>
-
-                    <h3>Goodwill Traders</h3>
-
-                    <p>
-                        Business website showcasing product, brand identity,
-                        and customer engagement features, with WhatsApp-based ordering
-                        and smooth UI animations.
-                    </p>
-
-                    <div class="project-tech">
-                        <span>React vite</span>
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>GA4</span>
-                        <span>EMAILJS</span>
-                    </div>
-
-                    <span class="visit-cta">Click to visit →</span>
-                </a>
-
-                <!-- Waffle Burst (GitHub Pages) -->
-                <a href="https://dragon7798.github.io/waffle-burst/" target="_blank" class="personal-project-card"
-                    onclick="gtag('event','personal_project_click',{project:'WaffleBurst-Netlify'})">
-
-                    <div class="project-thumbnail">
-                        <img src="assets/project/waffle_burst/1.png" alt="Waffle Burst Preview" loading="lazy">
-                    </div>
-
-                    <h3>Waffle Burst</h3>
-
-                    <p>
-                        Business website showcasing menu, brand identity,
-                        and customer engagement features, with WhatsApp-based ordering
-                        and smooth UI animations.
-                    </p>
-
-                    <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-
-                    <span class="visit-cta">Click to visit →</span>
-                </a>
-
-                <!-- Dsouza Brothers -->
-                <a href="https://dsouzabbrothers.netlify.app/" target="_blank" class="personal-project-card"
-                    onclick="gtag('event','personal_project_click',{project:'DsouzaBrothers'})">
-
-                    <div class="project-thumbnail">
-                        <img src="assets/project/dsouza_brothers/1.png" alt="Dsouza Brothers Preview" loading="lazy">
-                    </div>
-
-                    <h3>Dsouza Brothers</h3>
-
-                    <p>
-                        Business website showcasing menu, brand identity,
-                        and customer engagement features.
-                    </p>
-
-                    <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-
-                    <span class="visit-cta">Click to visit →</span>
-                </a>
-
-                <!-- Backend Utility -->
-                <a href="https://github.com/Dragon7798" target="_blank" class="personal-project-card"
-                    onclick="gtag('event','personal_project_click',{project:'BackendUtility'})">
-
-                    <div class="project-thumbnail">
-                        <img src="assets/project/git/1.png" alt="Backend Utility Preview" loading="lazy">
-                    </div>
-
-                    <h3>Backend Utility Suite</h3>
-
-                    <p>
-                        Spring Boot utilities for authentication, encryption,
-                        and reusable API components.
-                    </p>
-
-                    <div class="project-tech">
-                        <span>Java</span>
-                        <span>Spring Boot</span>
-                        <span>JWT</span>
-                        <span>REST</span>
-                    </div>
-
-                    <span class="visit-cta">Click to visit →</span>
-                </a>
-
+    <!-- ===== SKILLS ===== -->
+    <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="reveal">
+          <span class="eyebrow">Technical depth</span>
+          <h2 class="section-title" id="skills-heading">What I build<br>and how I work.</h2>
+          <p class="section-sub">A focused stack built around backend reliability, cloud infrastructure, and secure system design.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal reveal-d1">
+            <div class="skill-icon" aria-hidden="true">⚙️</div>
+            <div class="skill-title">Backend &amp; APIs</div>
+            <p class="skill-desc">Core backend development with a focus on clean architecture, REST and GraphQL, and performance-oriented microservices design.</p>
+            <div class="skill-tags">
+              <span class="tag">Java 8/17/21</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Spring MVC</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">GraphQL</span>
+              <span class="tag">Microservices</span>
             </div>
-        </section>
-
-
-
-        <div class="projects-wrapper" id="projects">
-            <h2>Key Projects</h2>
-
-            <div class="scrolling-container">
-                <div class="scrolling-track">
-
-                    <!-- HDFC MME -->
-                    <div class="project-card">
-                        <h3>HDFC MME</h3>
-
-                        <ul class="project-points">
-                            <li>Designed and developed secure REST APIs using Spring Boot</li>
-                            <li>Implemented JWT-based authentication and authorization</li>
-                            <li>Optimized backend performance for core banking workflows</li>
-                        </ul>
-
-                        <div class="project-tech">
-                            <span>Java</span>
-                            <span>Spring Boot</span>
-                            <span>JWT</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                    </div>
-
-                    <!-- CEAT Speciality -->
-                    <div class="project-card">
-                        <h3>CEAT Speciality</h3>
-
-                        <ul class="project-points">
-                            <li>Built a serverless PDF generation service using AWS Lambda</li>
-                            <li>Integrated Python-based Lambda via SHAFT framework</li>
-                            <li>Handled secure data flow and dynamic document templates</li>
-                        </ul>
-
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>AEM</span>
-                            <span>SHAFT</span>
-                        </div>
-                    </div>
-
-                    <!-- IDFC First Bank -->
-                    <div class="project-card">
-                        <h3>IDFC First Bank</h3>
-
-                        <ul class="project-points">
-                            <li>Implemented AES and RSA encryption for sensitive financial data</li>
-                            <li>Designed secure encryption/decryption modules</li>
-                            <li>Ensured compliance with enterprise security standards</li>
-                        </ul>
-
-                        <div class="project-tech">
-                            <span>Java</span>
-                            <span>AES / RSA</span>
-                            <span>Security</span>
-                            <span>Cognito</span>
-                            <span>Lambda</span>
-                        </div>
-                    </div>
-
-                    <!-- IndiaFirst Life Insurance -->
-                    <div class="project-card">
-                        <h3>IndiaFirst Life Insurance</h3>
-
-                        <ul class="project-points">
-                            <li>Designed REST APIs using Spring Boot</li>
-                            <li>Implemented RBAC using Keycloak identity provider</li>
-                            <li>Optimized PostgreSQL queries for high-traffic workloads</li>
-                        </ul>
-
-                        <div class="project-tech">
-                            <span>Spring Boot</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                    </div>
-
-                    <!-- Grasim Birla Opus Paints -->
-                    <div class="project-card">
-                        <h3>Grasim Birla Opus Paints</h3>
-
-                        <ul class="project-points">
-                            <li>Built GraphQL API layer for mobile applications</li>
-                            <li>Implemented JWT-based authentication</li>
-                            <li>Improved API response times and scalability</li>
-                        </ul>
-
-                        <div class="project-tech">
-                            <span>GraphQL</span>
-                            <span>JWT</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                    </div>
-
-                    <!-- KlarifyLife Insurance -->
-                    <div class="project-card">
-                        <h3>KlarifyLife Insurance</h3>
-
-                        <ul class="project-points">
-                            <li>Developed secure APIs using SHAFT framework</li>
-                            <li>Implemented JWT-based authorization mechanisms</li>
-                            <li>Managed transactional data using MySQL</li>
-                        </ul>
-
-                        <div class="project-tech">
-                            <span>Java</span>
-                            <span>JWT</span>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-
-                    <!-- Future Generali India Insurance -->
-                    <div class="project-card">
-                        <h3>Future Generali India Insurance</h3>
-
-                        <ul class="project-points">
-                            <li>Integrated Razorpay payment gateway APIs</li>
-                            <li>Handled secure transaction processing</li>
-                            <li>Optimized MySQL database queries</li>
-                        </ul>
-
-                        <div class="project-tech">
-                            <span>Razorpay</span>
-                            <span>MySQL</span>
-                            <span>Payments</span>
-                        </div>
-                    </div>
-
-                    <!-- HDFC MME -->
-                    <div class="project-card">
-                        <h3>HDFC MME</h3>
-
-                        <ul class="project-points">
-                            <li>Designed and developed secure REST APIs using Spring Boot</li>
-                            <li>Implemented JWT-based authentication and authorization</li>
-                            <li>Optimized backend performance for core banking workflows</li>
-                        </ul>
-
-                        <div class="project-tech">
-                            <span>Java</span>
-                            <span>Spring Boot</span>
-                            <span>JWT</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="skill-card reveal reveal-d2">
+            <div class="skill-icon" aria-hidden="true">☁️</div>
+            <div class="skill-title">Cloud &amp; Security</div>
+            <p class="skill-desc">AWS-native workflows, identity management, encryption, and security-first API design following OWASP principles.</p>
+            <div class="skill-tags">
+              <span class="tag">AWS Lambda</span>
+              <span class="tag">AWS Cognito</span>
+              <span class="tag">JWT</span>
+              <span class="tag">OAuth 2.0</span>
+              <span class="tag">AES/RSA</span>
+              <span class="tag">RBAC</span>
             </div>
+          </div>
+          <div class="skill-card reveal reveal-d3">
+            <div class="skill-icon" aria-hidden="true">🗄️</div>
+            <div class="skill-title">Data &amp; Automation</div>
+            <p class="skill-desc">Multi-database experience with query optimization, data flow design, and serverless Python automation for integration workflows.</p>
+            <div class="skill-tags">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Oracle</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Python</span>
+              <span class="tag">Serverless</span>
+            </div>
+          </div>
+          <div class="skill-card reveal reveal-d4">
+            <div class="skill-icon" aria-hidden="true">🛠️</div>
+            <div class="skill-title">Tooling &amp; Practices</div>
+            <p class="skill-desc">Version control, performance monitoring, QA-aware implementation, and engineering practices that support team velocity and code quality.</p>
+            <div class="skill-tags">
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">Bitbucket</span>
+              <span class="tag">Clean Code</span>
+              <span class="tag">Monitoring</span>
+              <span class="tag">QA Practices</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="reveal">
+          <span class="eyebrow">Personal projects</span>
+          <h2 class="section-title" id="projects-heading">Side projects that show<br>product thinking and execution.</h2>
+          <p class="section-sub">Focused on modern UX, frontend polish, and independent delivery — the kind of work that helps a recruiter understand how I think and build.</p>
         </div>
 
+        <div class="project-grid">
 
-        <section id="contact">
-            <div class="contact-section">
-                <h2>Let’s Connect</h2>
-                <p class="contact-subtitle">Open to backend engineering opportunities.</p>
-
-                <div class="contact-cards">
-                    <a href="tel:+917798909179" class="contact-card" aria-label="Call Chetan"
-                        onclick="trackContactClick()">
-                        <div class="icon">📞</div>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+91 7798909179</p>
-                        </div>
-                    </a>
-                    <a href="mailto:chetandabholkar7@gmail.com" class="contact-card" onclick="trackContactClick()">
-                        <div class="icon">📧</div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>chetandabholkar7@gmail.com</p>
-                        </div>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/chetan-dabholkar-31037780" target="_blank" class="contact-card"
-                        onclick="trackSocialClick('LinkedIn')">
-                        <div class="icon">💼</div>
-                        <div>
-                            <h4>LinkedIn</h4>
-                            <p>Professional Profile</p>
-                        </div>
-                    </a>
-
-                    <a href="https://github.com/Dragon7798" target="_blank" class="contact-card"
-                        onclick="trackSocialClick('GitHub')">
-                        <div class="icon">👨‍💻</div>
-                        <div>
-                            <h4>GitHub</h4>
-                            <p>Projects & Code</p>
-                        </div>
-                    </a>
-                </div>
+          <article class="project-card featured reveal reveal-d1">
+            <div class="project-img">
+              <img src="assets/project/portfolio/1.png" alt="Developer portfolio website preview" loading="lazy" decoding="async">
             </div>
-        </section>
+            <div class="project-body">
+              <div class="project-badges">
+                <span class="badge badge-featured">Featured</span>
+                <span class="badge badge-default">Portfolio</span>
+              </div>
+              <h3 class="project-title">Developer Portfolio</h3>
+              <p class="project-desc">Recruiter-focused portfolio with analytics tracking, resume download insights, and stronger conversion behaviour.</p>
+              <div class="project-stack">
+                <span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JS</span><span class="stack-tag">GA4</span><span class="stack-tag">Vercel</span>
+              </div>
+              <a href="https://chetan-dabholkar-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" data-track-project="Portfolio">
+                View live portfolio
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
 
-        <!-- Resume CTA -->
-        <div class="resume-cta">
-            <a href="assets/resume/Chetan_Dabholkar.pdf" download class="resume-btn">
-                📄 Download Resume
-            </a>
+          <article class="project-card featured reveal reveal-d2">
+            <div class="project-img">
+              <img src="assets/project/goodwill_traders/1.png" alt="Goodwill Traders website preview" loading="lazy" decoding="async">
+            </div>
+            <div class="project-body">
+              <div class="project-badges">
+                <span class="badge badge-featured">Featured</span>
+                <span class="badge badge-default">Business site</span>
+              </div>
+              <h3 class="project-title">Goodwill Traders</h3>
+              <p class="project-desc">Business website built for brand clarity, customer engagement, and WhatsApp-based conversion flow with smooth interaction design.</p>
+              <div class="project-stack">
+                <span class="stack-tag">React + Vite</span><span class="stack-tag">EmailJS</span><span class="stack-tag">GA4</span>
+              </div>
+              <a href="https://goodwill-traders.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" data-track-project="GoodwillTraders">
+                View live project
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal-d3">
+            <div class="project-img">
+              <img src="assets/project/community_hub/1.png" alt="Local Community Hub preview" loading="lazy" decoding="async">
+            </div>
+            <div class="project-body">
+              <div class="project-badges">
+                <span class="badge badge-default">Community</span>
+              </div>
+              <h3 class="project-title">Local Event &amp; Community Hub</h3>
+              <p class="project-desc">Modern frontend for local discovery and event browsing with SEO-friendly structure and engaging interactions.</p>
+              <div class="project-stack">
+                <span class="stack-tag">Spring Boot</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">HTML/CSS/JS</span>
+              </div>
+              <a href="https://community-hub-production-cfb1.up.railway.app/" target="_blank" rel="noopener noreferrer" class="project-link" data-track-project="CommunityHub">
+                View live project
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal-d1">
+            <div class="project-img">
+              <img src="assets/project/waffle_burst/1.png" alt="Waffle Burst website preview" loading="lazy" decoding="async">
+            </div>
+            <div class="project-body">
+              <div class="project-badges">
+                <span class="badge badge-default">Business landing</span>
+              </div>
+              <h3 class="project-title">Waffle Burst</h3>
+              <p class="project-desc">Customer-first landing page built with clean conversion flow, responsive design, and polished interactions.</p>
+              <div class="project-stack">
+                <span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span>
+              </div>
+              <a href="https://dragon7798.github.io/waffle-burst/" target="_blank" rel="noopener noreferrer" class="project-link" data-track-project="WaffleBurst">
+                View live project
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal-d2">
+            <div class="project-img">
+              <img src="assets/project/dsouza_brothers/1.png" alt="Dsouza Brothers website preview" loading="lazy" decoding="async">
+            </div>
+            <div class="project-body">
+              <div class="project-badges">
+                <span class="badge badge-default">Local business</span>
+              </div>
+              <h3 class="project-title">Dsouza Brothers</h3>
+              <p class="project-desc">Responsive business site designed for clear product communication and a polished browsing experience.</p>
+              <div class="project-stack">
+                <span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span>
+              </div>
+              <a href="https://dsouzabbrothers.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link" data-track-project="DsouzaBrothers">
+                View live project
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal-d3">
+            <div class="project-img">
+              <img src="assets/project/git/1.png" alt="Backend Utility Suite on GitHub" loading="lazy" decoding="async">
+            </div>
+            <div class="project-body">
+              <div class="project-badges">
+                <span class="badge badge-default">Utility suite</span>
+              </div>
+              <h3 class="project-title">Backend Utility Suite</h3>
+              <p class="project-desc">Spring Boot utilities for authentication, encryption, and reusable backend components with clean implementation patterns.</p>
+              <div class="project-stack">
+                <span class="stack-tag">Java</span><span class="stack-tag">Spring Boot</span><span class="stack-tag">JWT</span><span class="stack-tag">REST</span>
+              </div>
+              <a href="https://github.com/Dragon7798" target="_blank" rel="noopener noreferrer" class="project-link" data-track-project="BackendUtility">
+                View on GitHub
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
         </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="reveal">
+          <span class="eyebrow">Recruiter and client contact</span>
+          <h2 class="section-title" id="contact-heading">Start with the role,<br>the impact, and the fit.</h2>
+          <div class="divider" aria-hidden="true"></div>
+        </div>
+        <div class="contact-inner">
+          <div>
+            <p class="about-text reveal">
+              If you're hiring for backend engineering, API design, platform work, or a senior-level engineering problem, I'd welcome a conversation. This portfolio is built to make the next step obvious: review, download, and connect.
+            </p>
+            <div class="contact-actions reveal reveal-d1">
+              <a href="assets/resume/Chetan_Dabholkar.pdf" download class="btn-primary" onclick="trackResumeDownload()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download resume
+              </a>
+              <a href="mailto:chetandabholkar7@gmail.com" class="btn-outline" onclick="trackContactClick()">
+                Email directly
+              </a>
+            </div>
+          </div>
+          <div class="contact-cards">
+            <a href="tel:+917798909179" class="contact-card reveal reveal-d1" aria-label="Call Chetan" onclick="trackContactClick()">
+              <div class="contact-icon" aria-hidden="true">📞</div>
+              <div class="contact-card-body">
+                <strong>Phone</strong>
+                <p>+91 7798909179</p>
+              </div>
+            </a>
+            <a href="mailto:chetandabholkar7@gmail.com" class="contact-card reveal reveal-d2" onclick="trackContactClick()">
+              <div class="contact-icon" aria-hidden="true">📧</div>
+              <div class="contact-card-body">
+                <strong>Email</strong>
+                <p>chetandabholkar7@gmail.com</p>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/chetan-dabholkar-31037780" target="_blank" rel="noopener noreferrer" class="contact-card reveal reveal-d3" onclick="trackSocialClick('LinkedIn')">
+              <div class="contact-icon" aria-hidden="true">💼</div>
+              <div class="contact-card-body">
+                <strong>LinkedIn</strong>
+                <p>Professional profile →</p>
+              </div>
+            </a>
+            <a href="https://github.com/Dragon7798" target="_blank" rel="noopener noreferrer" class="contact-card reveal reveal-d4" onclick="trackSocialClick('GitHub')">
+              <div class="contact-icon" aria-hidden="true">👨‍💻</div>
+              <div class="contact-card-body">
+                <strong>GitHub</strong>
+                <p>Code and project history →</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© <span id="currentYear"></span> Chetan Dabholkar · Built for clarity, speed, and recruiter-first storytelling.</p>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/chetan-dabholkar-31037780" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/Dragon7798" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="mailto:chetandabholkar7@gmail.com">Email</a>
+        </div>
+      </div>
     </div>
-    <div class="mobile-view">
+  </footer>
 
-        <nav class="mobile-nav">
-            <span class="mobile-logo">Chetan Dabholkar</span>
+  <!-- FAB -->
+  <div class="fab" id="fab" aria-label="Quick actions">
+    <a href="assets/resume/Chetan_Dabholkar.pdf" download class="btn-primary" onclick="trackResumeDownload()">
+      Resume ↓
+    </a>
+    <a href="#contact" class="btn-outline">Contact</a>
+  </div>
 
-            <a href="assets/resume/Chetan_Dabholkar.pdf" download class="mobile-resume-btn"
-                onclick="trackResumeDownload()">
-                📄 Resume
-            </a>
-        </nav>
-
-
-        <!-- Mobile Hero -->
-        <section class="mobile-hero">
-            <img src="assets/profile/profile.jpg" alt="Chetan Dabholkar">
-
-            <h1>Backend Developer</h1>
-            <p>I write Java code so servers don’t panic ☕</p>
-        </section>
-
-        <!-- Mobile About -->
-        <section class="mobile-about">
-            <h2>About Me</h2>
-            <p>
-                Results-driven Java Backend Developer with 3+ years of experience designing,
-                developing, and optimizing RESTful and GraphQL APIs using Java and Spring Boot.
-                Proven ability to build secure, scalable, and high-performance backend systems
-                with strong expertise in authentication and authorization mechanisms, including
-                JWT, OAuth 2.0, and AWS Cognito.
-            </p>
-
-            <p>
-                Experienced in working with AWS services, relational and NoSQL databases, and
-                enterprise-grade applications across banking, insurance, and e-commerce domains.
-                Known for strong problem-solving skills, clean code practices, clean code principles,
-                and a continuous focus on performance optimization and application security.
-            </p>
-            <p>
-                I integrated Google Analytics custom events to track resume downloads, contact interactions, and social
-                profile engagement on my portfolio.
-            </p>
-        </section>
-
-        <!-- Mobile Stats -->
-        <section class="mobile-stats">
-            <div><strong>3+</strong><span>Years</span></div>
-            <div><strong>7+</strong><span>Projects</span></div>
-            <div><strong>8+</strong><span>Tech</span></div>
-        </section>
-
-        <!-- Mobile Skills -->
-        <section class="mobile-skills">
-            <h2>Core Skills</h2>
-
-            <div class="skills-wrap">
-                <div class="skill-chip">Java 8 | 17 | 21</div>
-                <div class="skill-chip">C++</div>
-                <div class="skill-chip">Python</div>
-                <div class="skill-chip">Spring Boot</div>
-                <div class="skill-chip">REST APIs</div>
-                <div class="skill-chip">GraphQL</div>
-                <div class="skill-chip">JWT & OAuth 2.0</div>
-
-                <div class="skill-chip">AWS (Lambda, Cognito)</div>
-                <div class="skill-chip">Application Security</div>
-
-                <div class="skill-chip">PostgreSQL</div>
-                <div class="skill-chip">MySQL</div>
-                <div class="skill-chip">MongoDB</div>
-
-                <div class="skill-chip">Git & GitHub</div>
-            </div>
-        </section>
-
-        <!-- Personal Projects -->
-        <section id="personal-projects" class="personal-projects-section">
-            <h2>Personal Projects</h2>
-
-            <div class="personal-projects-grid">
-
-                <!-- Portfolio Project -->
-                <a href="https://chetan-dabholkar-portfolio.vercel.app/" target="_blank" class="personal-project-card"
-                    onclick="gtag('event','personal_project_click',{project:'Portfolio'})">
-
-                    <div class="project-thumbnail">
-                        <img src="assets/project/portfolio/1.png" alt="Developer Portfolio Preview" loading="lazy">
-                    </div>
-
-                    <h3>Developer Portfolio</h3>
-
-                    <p>
-                        Responsive developer portfolio with analytics tracking,
-                        resume download insights, and performance optimization.
-                    </p>
-
-                    <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>GA4</span>
-                        <span>Vercel</span>
-                    </div>
-
-                    <span class="visit-cta">Click to visit →</span>
-                </a>
-
-                <!-- Event Hub -->
-                <a href="https://community-hub-production-cfb1.up.railway.app/" target="_blank"
-                    class="personal-project-card" onclick="gtag('event','personal_project_click',{project:'EventHub'})">
-
-                    <div class="project-thumbnail">
-                        <img src="assets/project/community_hub/1.png" alt="Local Event Hub Preview" loading="lazy">
-                    </div>
-
-                    <h3>Local Event & Community Hub</h3>
-
-                    <p>
-                        Platform to discover and showcase local events with clean UI,
-                        SEO-friendly structure, and modern animations.
-                    </p>
-
-                    <div class="project-tech">
-                        <span>Spring Boot</span>
-                        <span>PostgreSQL</span>
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>GA4</span>
-                        <span>Railways</span>
-                    </div>
-
-                    <span class="visit-cta">Click to visit →</span>
-                </a>
-
-                <!-- Waffle Burst (GitHub Pages) -->
-                <a href="https://dragon7798.github.io/waffle-burst/" target="_blank" class="personal-project-card"
-                    onclick="gtag('event','personal_project_click',{project:'WaffleBurst-Netlify'})">
-
-                    <div class="project-thumbnail">
-                        <img src="assets/project/waffle_burst/1.png" alt="Waffle Burst Preview" loading="lazy">
-                    </div>
-
-                    <h3>Waffle Burst</h3>
-
-                    <p>
-                        Business website showcasing menu, brand identity,
-                        and customer engagement features, with WhatsApp-based ordering
-                        and smooth UI animations.
-                    </p>
-
-                    <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-
-                    <span class="visit-cta">Click to visit →</span>
-                </a>
-
-                <!-- Dsouza Brothers -->
-                <a href="https://dsouzabbrothers.netlify.app/" target="_blank" class="personal-project-card"
-                    onclick="gtag('event','personal_project_click',{project:'DsouzaBrothers'})">
-
-                    <div class="project-thumbnail">
-                        <img src="assets/project/dsouza_brothers/1.png" alt="Dsouza Brothers Preview" loading="lazy">
-                    </div>
-
-                    <h3>Dsouza Brothers</h3>
-
-                    <p>
-                        Business website showcasing menu, brand identity,
-                        and customer engagement features.
-                    </p>
-
-                    <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-
-                    <span class="visit-cta">Click to visit →</span>
-                </a>
-
-                <!-- Backend Utility -->
-                <a href="https://github.com/Dragon7798" target="_blank" class="personal-project-card"
-                    onclick="gtag('event','personal_project_click',{project:'BackendUtility'})">
-
-                    <div class="project-thumbnail">
-                        <img src="assets/project/git/1.png" alt="Backend Utility Preview" loading="lazy">
-                    </div>
-
-                    <h3>Backend Utility Suite</h3>
-
-                    <p>
-                        Spring Boot utilities for authentication, encryption,
-                        and reusable API components.
-                    </p>
-
-                    <div class="project-tech">
-                        <span>Java</span>
-                        <span>Spring Boot</span>
-                        <span>JWT</span>
-                        <span>REST</span>
-                    </div>
-
-                    <span class="visit-cta">Click to visit →</span>
-                </a>
-
-            </div>
-        </section>
-
-
-        <!-- Mobile Projects -->
-        <section class="mobile-projects">
-            <h2>Projects</h2>
-
-            <div class="mobile-project-card">
-                <h3>HDFC MME</h3>
-                <p>Secure Spring Boot APIs with JWT & PostgreSQL</p>
-            </div>
-
-            <div class="mobile-project-card">
-                <h3>CEAT Speciality</h3>
-                <p>PDF generation with Python</p>
-            </div>
-
-            <div class="mobile-project-card">
-                <h3>IDFC First Bank</h3>
-                <p>Data security & encryption modules. AWS Services(Lambda, Cognito)</p>
-            </div>
-
-            <div class="mobile-project-card">
-                <h3>IndiaFirst Life Insurance</h3>
-                <p>REST APIs for PDF Generation</p>
-            </div>
-
-            <div class="mobile-project-card">
-                <h3>Grasim Birla Opus Paints</h3>
-                <p>Scalable GraphQL API layer for mobile apps</p>
-            </div>
-
-            <div class="mobile-project-card">
-                <h3>KlarifyLife Insurance</h3>
-                <p>Secure transactional APIs with SHAFT & MySQL</p>
-            </div>
-
-            <div class="mobile-project-card">
-                <h3>Future Generali India Insurance</h3>
-                <p>Secure payment gateway integration with Razorpay</p>
-            </div>
-        </section>
-
-        <section class="mobile-contact">
-            <a href="tel:+917798909179" class="mobile-contact-card" onclick="trackContactClick()">
-                <span class="icon">📞</span>
-                <span class="label">Call</span>
-            </a>
-
-            <a href="mailto:chetandabholkar7@gmail.com" class="mobile-contact-card" onclick="trackContactClick()">
-                <span class="icon">📧</span>
-                <span class="label">Email</span>
-            </a>
-
-            <a href="https://github.com/Dragon7798" target="_blank" class="mobile-contact-card"
-                onclick="trackSocialClick('GitHub')">
-                <span class="icon">👨‍💻</span>
-                <span class="label">GitHub</span>
-            </a>
-        </section>
-    </div>
-    <footer>
-        <p>© 2026 Chetan Dabholkar · Built with clean code & modern CSS</p>
-    </footer>
-    <div id="playSticker" onclick="goGame()">🎮 Click to Play</div>
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
-
 </html>
